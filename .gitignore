@@ -12,3 +12,9 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+
+demoservice/out
+spring-cloud-config-service/out
+spring-cloud-config-service/gradle
+demoservice/gradle
+
