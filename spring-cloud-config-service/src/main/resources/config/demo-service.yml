@@ -1,0 +1,46 @@
+spring:
+  rabbitmq:
+    host: localhost
+    virtual-host: /defaultVH
+    username: defaultUser
+    password: defaultPassword
+  cloud:
+    stream:
+      bindings:
+        sampleQueueA:
+          binder: rabbit-A
+          contentType: application/x-java-object
+          group: groupA
+          destination: sampleQueueA
+        sampleQueueB:
+          binder: rabbit-B
+          contentType: application/x-java-object
+          group: groupB
+          destination: sampleQueueB
+      binders:
+        rabbit-A:
+          defaultCandidate: false
+          inheritEnvironment: false
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                virtualHost: /vhA
+                username: userA
+                password: paswdA
+                port: 5672
+                connection-timeout: 10000
+        rabbit-B:
+          defaultCandidate: false
+          inheritEnvironment: false
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                virtualHost: /vhB
+                username: userB
+                password: paswdB
+                port: 5672
+                connection-timeout: 10000

@@ -1,0 +1,22 @@
+############################################
+# default settings
+############################################
+spring:
+  profiles:
+    active: native
+  application:
+    name: config-service
+  cloud:
+    config:
+      enabled: false
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    enabled: false
+  instance:
+    nonSecurePort: ${server.port}
+    initial-status: STARTING
+

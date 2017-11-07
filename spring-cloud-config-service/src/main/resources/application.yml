@@ -1,0 +1,12 @@
+info:
+  component: Configuration Service
+---
+############################################
+spring.profiles: native
+############################################
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: ${NATIVE_LOCATION:classpath:/config}

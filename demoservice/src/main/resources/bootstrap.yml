@@ -1,0 +1,20 @@
+############################################
+# default settings
+############################################
+spring:
+  main:
+    banner-mode: "off"
+  application:
+    name: demo-service
+  cloud:
+    config:
+      enabled: true #change this to use config-service
+      retry:
+        maxAttempts: 3
+      discovery:
+        enabled: false
+      fail-fast: true
+
+server:
+  port: 8080
+
