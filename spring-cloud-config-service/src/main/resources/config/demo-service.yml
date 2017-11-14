@@ -1,9 +1,6 @@
 spring:
-  rabbitmq:
-    host: localhost
-    virtual-host: /defaultVH
-    username: defaultUser
-    password: defaultPassword
+  # Do not define spring.rabbitmq.* properties here
+  # @see https://github.com/spring-cloud/spring-cloud-stream/issues/1124
   cloud:
     stream:
       bindings:

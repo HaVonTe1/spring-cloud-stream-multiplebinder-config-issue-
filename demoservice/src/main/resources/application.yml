@@ -1,9 +1,14 @@
 spring:
+  # Theese settings are necessary for the healthchecks in Actuator
+  # Do not put them in a remote config
+  # @see https://github.com/spring-cloud/spring-cloud-stream/issues/1124
   rabbitmq:
     host: localhost
     virtual-host: /defaultVH
     username: defaultUser
     password: defaultPassword
+  # The following properties are ONLY needed when using no config-service
+  # If you put them in a remote config it is safe to delete them.
   cloud:
     stream:
       bindings:
