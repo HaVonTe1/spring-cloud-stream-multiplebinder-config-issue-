@@ -7,6 +7,7 @@ spring:
   cloud:
     config:
       allowOverride: true
+      overrideNone: true
     stream:
       bindings:
         sampleQueueA:
