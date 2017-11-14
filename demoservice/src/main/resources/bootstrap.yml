@@ -15,7 +15,6 @@ spring:
         enabled: false
       fail-fast: true
       override-system-properties: false
-      override-none: true
 
 server:
   port: 8080
