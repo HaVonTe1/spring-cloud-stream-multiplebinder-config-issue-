@@ -11,3 +11,7 @@ But when using the config-service, which is delivering the exact same config fil
 ![con_bad](rabbit_con_bad.png) 
 
 All bindings refer to the default connection which only real purpose  should be to override the default credentials for the actuator health endpoint.
+
+# Workaround #
+
+[https://github.com/HaVonTe1/spring-cloud-stream-multiplebinder-config-issue-/tree/workaround](https://github.com/HaVonTe1/spring-cloud-stream-multiplebinder-config-issue-/tree/workaround) 
